@@ -21,7 +21,7 @@ var BaseWidget = Backbone.View.extend({
         self.server = server      
       })    
 
-      this.timer = setInterval( function () { self.UpdateModel(true) }, 1000 )
+      this.timer = setInterval( function () { self.UpdateModel(false) }, 100 )
 
       // set event listners
       this.model
@@ -98,7 +98,7 @@ var BaseWidget = Backbone.View.extend({
       var self = this
       this.$el.find('[name=from]').val("")
       this.$el.find('[name=to]').val("")
-      this.timer = setInterval( function () { self.UpdateModel(true) }, this.updateFrequency )      
+      this.timer = setInterval( function () { self.UpdateModel(true) }, 100 )
     }
     // one of the template time frame selected
     // example: last 15mins, last 1 day etc    

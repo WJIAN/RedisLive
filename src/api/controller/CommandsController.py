@@ -18,7 +18,7 @@ class CommandsController(BaseController):
 
         if from_date == None or to_date == None or from_date == '' or to_date == '':
             end = datetime.now()
-            delta = timedelta(seconds=120)
+            delta = timedelta(seconds=1800)
             start = end - delta
         else:
             start = dateutil.parser.parse(from_date)

@@ -2,7 +2,7 @@ var BaseWidget = Backbone.View.extend({
 
   enableLogging : false
 
-, updateFrequency : 1000
+, updateFrequency : 10000
 
 , Name : "BaseWidget"
 
@@ -21,7 +21,7 @@ var BaseWidget = Backbone.View.extend({
         self.server = server      
       })    
 
-      this.timer = setInterval( function () { self.UpdateModel(true) }, this.updateFrequency )      
+      this.timer = setInterval( function () { self.UpdateModel(true) }, 1000 )
 
       // set event listners
       this.model
